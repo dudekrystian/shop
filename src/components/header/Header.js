@@ -1,20 +1,20 @@
 import React from "react";
+import UserPanel from "./UserPanel";
+import Logo from "./Logo";
+import Search from "./Search";
+import MenuButton from "./MenuButton";
 
 export default function Header() {
   return (
     <div className="header">
-      {/* <Logo /> */}
-      <div className="panel">
-        <i class="bi bi-person"></i>
-        <i class="bi bi-heart"></i>
-        <i class="bi bi-cart2"></i>
+      <div className="first-item">
+        <Logo />
+        <UserPanel />
       </div>
-      <div className="menu">
-        <i class="bi bi-list"></i>
-        <span>Menu</span>
+      <div className="second-item">
+        <MenuButton />
+        <Search />
       </div>
-
-      <input type="search" placeholder="Czego potrzebujesz?"></input>
     </div>
   );
 }
