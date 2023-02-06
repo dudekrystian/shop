@@ -21,6 +21,11 @@
         font-weight: bold;
         text-align: start;
 
+        .link {
+            text-decoration: none;
+            color: black;
+        }
+
         
     }
 
@@ -29,6 +34,11 @@
         width: 100%;
         display: flex;
         justify-content: space-evenly;
+        
+        .link {
+            text-decoration: none;
+            color: black;
+        }
 
         .element {
             display: flex;
@@ -39,6 +49,9 @@
             justify-content: center;
             font-size: 14px;
             cursor: pointer;
+            position: relative;
+            
+
 
             i {
                 text-align: center;
@@ -50,7 +63,43 @@
                 line-height: 12px;
                 white-space: nowrap;
                 text-align: center;
+                
+
+
+             
             }
+
+            .container-cart {
+                visibility: hidden;
+                background-color: black;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 5px;
+                right: 19px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+       
+
+                .counter {
+                    color: red;
+                    font-weight: bold;
+                    position: absolute;
+                    // top: 10px;
+                    // right: 10px;
+                    font-size: 8px;
+                    line-height: 8px;
+                    color: white;
+
+
+    
+    
+                }
+            }
+
+
 
 
         }
