@@ -58,18 +58,29 @@
         text-decoration: none;
         margin: 4px 0;
         flex-shrink: 0;
+
+        .link {
+            color: gray;
+            text-decoration: none;
+            list-style: none;
+            font-size: 12px;
+
+        }
         
 
         i {
             // text-align: center;
             font-size: 24px;
-            color: rgb(77, 77, 77)
+            color: gray;
+            margin-bottom: 10px;
+            
 
         }
 
         span {
     
-            color: rgb(77, 77, 77)
+            color: rgb(77, 77, 77);
+
         }
     }
 }
