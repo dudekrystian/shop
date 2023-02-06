@@ -1,0 +1,105 @@
+.cart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+    .cart-header {
+        color: gray;
+        font-size: 24px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    .cart-list-products {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 15px;
+
+
+        .cart-single-product {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+
+            .cart-title {
+                width: 50%;
+                text-align: left;
+                line-height: 40px;
+
+            }
+
+            .cart-quantity {
+                select {
+                    border-radius: 20px;
+                    width: 56px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+
+                }
+
+            }
+
+            .cart-price {
+                color: gray;
+                line-height: 40px;
+
+            }
+
+            .cart-button {
+
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    line-height: 40px;
+
+                }
+
+                :hover {
+                    color: gray;
+                    cursor: pointer;
+                }
+            }
+
+
+
+        }
+
+    }
+
+
+    .cart-purchase {
+        .cart-amount {
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+        }
+
+        .cart-button-pay {
+            margin: 15px 0;
+            button {
+                margin: auto;
+                border-radius: 512px;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: normal;
+                text-decoration: none;
+                border: none;
+                white-space: nowrap;
+                width: 100%;
+                height: 40px;
+                padding: 0px 8px;
+                background: rgb(17, 158, 0);
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+}
