@@ -10,6 +10,18 @@
         display: flex;
         flex-direction: column;
 
+        .gallery-product {
+            margin: auto;
+            width: 233px;
+            height: 200px;
+
+            img {
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+
 
         .button-back-product {
             background-color: transparent;
@@ -21,6 +33,8 @@
         .details-product {
             display: flex;
             flex-direction: column;
+            margin: 10px auto;
+
 
             .desc {
                 display: flex;
@@ -29,13 +43,34 @@
 
                 .brand-product{
                     display: flex;
+                    justify-content: space-between;
                     margin: 5px 0px;
+                    span {
+                        margin-right: 10px;
+                        text-align: left;     
+
+
+                                   }
+
+                                   .span-second {
+                                    width: 70%;
+                                   }
 
                 }
 
                 .info-product {
                     display: flex;
+                    justify-content: space-between;
                     margin: 5px 0px;
+
+                    span {
+                        margin-right: 10px;
+                        text-align: left;
+                    }
+
+                    .span-second {
+                        width: 80%;
+                       }
                 }
 
             }
