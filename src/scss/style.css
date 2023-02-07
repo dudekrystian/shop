@@ -508,7 +508,7 @@ footer .footer-social i {
 .menu-modal {
   position: fixed;
   opacity: 0.99;
-  background: black;
+  background: transparent;
   transition: opacity 300ms ease 0s;
   inset: 0px;
   z-index: 1003;
@@ -581,6 +581,11 @@ footer .footer-social i {
   font-size: 16px;
   margin-right: 40px;
 }
+.menu-modal .menu-modal-container .menu-modal-bottom .menu-modal-category-single .menu-modal-category-name .link {
+  text-decoration: none;
+  color: gray;
+}
+
 .loader {
   display: flex;
   top: 50%;
