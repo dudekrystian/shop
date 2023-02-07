@@ -21,7 +21,9 @@ export default function Sidebar() {
     dispatch(fetchAsyncCategories());
   }, [dispatch]);
 
-  const styled = {
+  console.log(isSidebarOn);
+
+  const styledNoDisplay = {
     display: "none",
   };
 
@@ -30,7 +32,10 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="menu-modal" styled={styled}>
+    <div
+      className="menu-modal"
+      style={isSidebarOn ? styledDisplay : styledNoDisplay}
+    >
       <div className="menu-modal-container">
         <div className="menu-modal-top-background">
           <div className="menu-modal-top">
