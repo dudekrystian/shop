@@ -1,12 +1,14 @@
 .menu-modal {
     position: fixed;
     opacity: 0.99;
-    background: black;
+    background: transparent;
     transition: opacity 300ms ease 0s;
     inset: 0px;
     z-index: 1003;
     overflow: hidden;
     display: none;
+
+   
 
 
     .menu-modal-container {
@@ -103,6 +105,11 @@
 
                 .menu-modal-category-name {
                     
+                    .link {
+                        text-decoration: none;
+                        color: gray;
+                      
+                    }
                 }
             }
         }
