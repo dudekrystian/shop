@@ -713,4 +713,31 @@ footer .footer-social i {
   background: rgb(17, 158, 0);
   color: rgb(255, 255, 255);
   cursor: pointer;
+}
+
+.cart-message-modal {
+  background: #ffffff;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  max-width: 90%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30em;
+  text-align: left;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.cart-message-modal .cart-message-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.cart-message-modal .cart-message-container i {
+  font-size: 48px;
 }/*# sourceMappingURL=style.css.map */

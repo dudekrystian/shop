@@ -16,6 +16,8 @@ import {
   setCartMessageOn,
 } from "../store/cartSlice";
 
+import CartMessage from "../components/cartMessage/CartMessage";
+
 export default function SingleProduct() {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -33,7 +35,7 @@ export default function SingleProduct() {
         dispatch(setCartMessageOff());
       }, 2000);
     }
-  }, []);
+  }, [cartMessageStatus]);
 
   let discountedPrice =
     product.price - product.price * (product.discountPercentage / 100);
@@ -121,6 +123,7 @@ export default function SingleProduct() {
           </button>
         </div>
       </div>
+      {cartMessageStatus && <CartMessage />}
     </div>
   );
 }
