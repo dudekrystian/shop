@@ -1,13 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getSidebarStatus, setSidebarOff } from "../../store/sidebarSlice";
 import {
   fetchAsyncCategories,
   getAllCategories,
 } from "../../store/categorySlice";
-import Product from "../products/Product";
 import MenuItems from "./MenuItems";
 
 // fetchCategory();
@@ -20,8 +18,6 @@ export default function Sidebar() {
   useEffect(() => {
     dispatch(fetchAsyncCategories());
   }, [dispatch]);
-
-  console.log(isSidebarOn);
 
   const styledNoDisplay = {
     display: "none",
