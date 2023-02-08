@@ -18,6 +18,8 @@ export default function Search() {
   const searchProducts = useSelector(getSearchProducts);
   const searchProductsStatus = useSelector(getSearchProductsStatus);
 
+  console.log(searchProducts);
+
   useEffect(() => {
     dispatch(clearSearch());
     dispatch(fetchAsyncSearchProduct(searchTerm));
@@ -31,8 +33,6 @@ export default function Search() {
           minHeight: "70vh",
         }}
       >
-        {" "}
-        {console.log("not f")}
         <div className="fw-5 text-danger py-5">
           <h3>No Products found.</h3>
         </div>
@@ -54,7 +54,6 @@ export default function Search() {
             ) : (
               <ListOfProducts products={searchProducts} />
             )}
-            {console.log("found!")}
           </div>
         </div>
       </div>

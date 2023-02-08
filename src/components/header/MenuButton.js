@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+// import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { setSidebarOn } from "../../store/sidebarSlice";
-import { getAllCategories } from "../../store/categorySlice";
-import { fetchAsyncCategories } from "../../store/categorySlice";
+// import { getAllCategories } from "../../store/categorySlice";
+// import { fetchAsyncCategories } from "../../store/categorySlice";
 
 export default function MenuButton() {
   const dispatch = useDispatch();
-  const categories = useSelector(getAllCategories);
+  // const categories = useSelector(getAllCategories);
   return (
     <div className="menu">
       <div className="element">
