@@ -1,13 +1,7 @@
-import Reac, { useEffect, useState } from "react";
-import { setSearchTerm } from "../../store/searchSlice";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { setSidebarOn } from "../../store/sidebarSlice";
-import { getAllCategories } from "../../store/categorySlice";
 
 export default function Search() {
-  const dispatch = useDispatch();
-  const categories = useSelector(getAllCategories);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchTerm = (e) => {
@@ -16,12 +10,13 @@ export default function Search() {
   };
   return (
     <div className="search">
-      <input
-        onChange={(e) => handleSearchTerm(e)}
-        type="search"
-        placeholder="What you need?"
-      ></input>
-      <Link to={`search/${searchTerm}`}></Link>
+      <Link to={`search/${searchTerm}`}>
+        <input
+          onChange={(e) => handleSearchTerm(e)}
+          type="text"
+          placeholder="What you need?"
+        ></input>
+      </Link>
     </div>
   );
 }
