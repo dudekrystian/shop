@@ -76,18 +76,14 @@ export default function SingleProduct() {
           <h2>{product?.title}</h2>
         </div>
         <div className="details-product">
-          <div className="rating-product">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </div>
+          <div className="rating-product"></div>
           <div className="desc">
             <div className="brand-product">
-              <span>Brand:</span>
+              <span className="span-one">Brand:</span>
               <span className="span-second">{product?.brand}</span>
             </div>
             <div className="info-product">
-              <span>Description:</span>
+              <span className="span-one">Description:</span>
               <span className="span-second">{product?.description}</span>
             </div>
           </div>
