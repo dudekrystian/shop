@@ -4,6 +4,7 @@ import categoryReducer from "./categorySlice";
 import productReducer from "./productSlice";
 import searchReducer from "./searchSlice";
 import cartReducer from "./cartSlice";
+import sortReducer from "./sortSlice";
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     product: productReducer,
     cart: cartReducer,
     search: searchReducer,
+    sort: sortReducer,
   },
 });
 
