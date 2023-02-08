@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import SortProduct from "./SortProduct";
 
 export default function ListOfProducts({ products, nameCategory }) {
   return (
@@ -13,7 +14,7 @@ export default function ListOfProducts({ products, nameCategory }) {
           <i class="bi bi-grid"></i>
         </button>
         <button>Filters</button>
-        <button>Sorting</button>
+        <SortProduct products={products} />
       </div>
       {products.map((product) => {
         let discountedPrice =
