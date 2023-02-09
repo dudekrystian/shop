@@ -16,14 +16,19 @@ export default function ListOfProducts({ products, nameCategory }) {
         <button>Filters</button>
         <SortProduct products={products} />
       </div>
-      {products.map((product) => {
-        let discountedPrice =
-          product.price - product.price * (product.discountPercentage / 100);
+      <div className="container-product">
+        {products.map((product) => {
+          let discountedPrice =
+            product.price - product.price * (product.discountPercentage / 100);
 
-        return (
-          <Product key={product.id} product={{ ...product, discountedPrice }} />
-        );
-      })}
+          return (
+            <Product
+              key={product.id}
+              product={{ ...product, discountedPrice }}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
