@@ -27,10 +27,6 @@ function App() {
           <Sidebar />
           <Header />
           <Category />
-          {/* <Sale />
-      <Sale />
-      <Sale /> */}
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<SingleProduct />} />

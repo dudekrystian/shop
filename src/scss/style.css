@@ -222,6 +222,18 @@ code {
   text-decoration: none;
   margin: 4px 0;
   flex-shrink: 0;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  height: 250px;
+  overflow: hidden !important;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.sale img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .list-container {
