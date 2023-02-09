@@ -230,6 +230,8 @@
             border: 0px;
             padding: 16px 0px 24px;
 
+
+
             @media (min-width: 1000px) {
                 grid-area: options-product;
                 flex-direction: row;
@@ -258,6 +260,9 @@
                 background: rgb(17, 158, 0);
                 color: rgb(255, 255, 255);
                 cursor: pointer;
+                transition: 0.2s linear;
+
+
 
                 @media (min-width: 1000px) {
                     width: 70%;
@@ -270,6 +275,10 @@
                 span {
                     margin-left: 10px;
                 }
+            }
+
+            :hover {
+                opacity: 0.9;
             }
         }
     }
