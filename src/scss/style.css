@@ -360,6 +360,13 @@ code {
     grid-template-areas: "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product" "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product" "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product" "product-title product-title product-title product-title price-product price-product price-product" "product-title product-title product-title product-title options-product options-product options-product";
   }
 }
+.single-product .container .product-title {
+  margin: 20px 0;
+}
+.single-product .container .product-title span {
+  font-size: 16px;
+  font-weight: bold;
+}
 @media (min-width: 1000px) {
   .single-product .container .product-title {
     grid-area: product-title;
@@ -371,9 +378,11 @@ code {
     flex-shrink: 0;
     border: 0px;
     padding: 16px 0px 24px;
+    margin: 0;
   }
   .single-product .container .product-title span {
     font-size: 24px;
+    line-height: 40px;
     font-weight: bold;
   }
 }

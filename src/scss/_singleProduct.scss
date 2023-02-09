@@ -31,6 +31,18 @@
 
 
         .product-title {
+
+            margin: 20px 0;
+
+            span {
+               
+
+                font-size: 16px;
+                font-weight: bold;
+
+
+            }
+            
             @media(min-width: 1000px) {
                 grid-area: product-title;
                 display: flex;
@@ -41,9 +53,12 @@
                 flex-shrink: 0;
                 border: 0px;
                 padding: 16px 0px 24px;
+                margin: 0;
+
 
                 span {
                     font-size: 24px;
+                    line-height: 40px;
                     font-weight: bold;
 
                 }
