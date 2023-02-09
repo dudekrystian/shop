@@ -64,7 +64,9 @@ export default function SingleProduct() {
   return (
     <div className="single-product">
       <div className="container">
-        <button className="button-back-product"></button>
+        {/* <button className="button-back-product">
+          <i class="bi bi-arrow-left"></i>
+        </button> */}
 
         <div className="gallery-product">
           <img
@@ -73,7 +75,7 @@ export default function SingleProduct() {
           />
         </div>
         <div className="product-title">
-          <h2>{product?.title}</h2>
+          <span>{product?.title}</span>
         </div>
         <div className="details-product">
           <div className="rating-product"></div>
