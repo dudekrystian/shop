@@ -22,9 +22,10 @@ code {
 .header {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .header .first-item {
-  margin: 1% 1%;
+  margin: 1px auto;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -33,7 +34,7 @@ code {
   justify-content: space-between;
 }
 .header .first-item .logo {
-  width: 100%;
+  width: 80%;
   letter-spacing: 1px;
   line-height: 28px;
   height: 28px;
@@ -47,34 +48,38 @@ code {
 .header .first-item .user-panel {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+@media (min-width: 1000px) {
+  .header .first-item .user-panel {
+    width: 30%;
+  }
 }
 .header .first-item .user-panel .link {
   text-decoration: none;
   color: black;
 }
-.header .first-item .user-panel .element {
+.header .first-item .user-panel .user-panel-element {
+  flex-basis: 1;
   display: flex;
   flex-direction: column;
-  width: 100%;
   min-width: 64px;
   height: 48px;
   justify-content: center;
-  font-size: 14px;
   cursor: pointer;
   position: relative;
 }
-.header .first-item .user-panel .element i {
+.header .first-item .user-panel .user-panel-element i {
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
 }
-.header .first-item .user-panel .element span {
+.header .first-item .user-panel .user-panel-element span {
   font-size: 10px;
   line-height: 12px;
   white-space: nowrap;
   text-align: center;
 }
-.header .first-item .user-panel .element .container-cart {
+.header .first-item .user-panel .user-panel-element .container-cart {
   visibility: hidden;
   background-color: black;
   width: 10px;
@@ -87,7 +92,7 @@ code {
   align-items: center;
   justify-content: center;
 }
-.header .first-item .user-panel .element .container-cart .counter {
+.header .first-item .user-panel .user-panel-element .container-cart .counter {
   color: red;
   font-weight: bold;
   position: absolute;
@@ -97,9 +102,10 @@ code {
 }
 .header .first-item .user-panel :hover {
   color: grey;
+  transition: 0.3s linear;
 }
 .header .second-item {
-  margin: 1% 1%;
+  margin: 1px auto;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -332,16 +338,54 @@ code {
   width: 100%;
   height: 100vh;
 }
+@media (min-width: 1000px) {
+  .single-product {
+    margin: 50px auto;
+  }
+}
 .single-product .container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 1000px) {
+  .single-product .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product" "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product" "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product" "product-title product-title product-title product-title price-product price-product price-product" "product-title product-title product-title product-title options-product options-product options-product";
+  }
+}
+@media (min-width: 1000px) {
+  .single-product .container .product-title {
+    grid-area: product-title;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    border: 0px;
+    padding: 16px 0px 24px;
+  }
+  .single-product .container .product-title span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
 .single-product .container .gallery-product {
   margin: auto;
   width: 233px;
   height: 200px;
+}
+@media (min-width: 1000px) {
+  .single-product .container .gallery-product {
+    grid-area: gallery-product;
+  }
 }
 .single-product .container .gallery-product img {
   width: 100%;
@@ -353,10 +397,26 @@ code {
   border: none;
   text-align: start;
 }
+@media (min-width: 1000px) {
+  .single-product .container .button-back-product {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .single-product .container .button-back-product i {
+    font-size: 16px;
+  }
+}
 .single-product .container .details-product {
   display: flex;
   flex-direction: column;
   margin: 10px auto;
+}
+@media (min-width: 1000px) {
+  .single-product .container .details-product {
+    grid-area: details-product;
+    justify-content: center;
+  }
 }
 .single-product .container .details-product .desc {
   display: flex;
@@ -397,9 +457,16 @@ code {
 }
 .single-product .container .price-product {
   width: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-end;
   align-items: baseline;
+}
+@media (min-width: 1000px) {
+  .single-product .container .price-product {
+    grid-area: price-product;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 .single-product .container .price-product .price-old {
   font-size: 13px;
@@ -409,12 +476,22 @@ code {
   text-decoration: line-through;
   margin-right: 8px;
 }
+@media (min-width: 1000px) {
+  .single-product .container .price-product .price-old {
+    font-size: 18px;
+  }
+}
 .single-product .container .price-product .price-discount {
   font-size: 18px;
   line-height: 24px;
   color: rgb(77, 77, 77);
   font-weight: normal;
   text-decoration: none;
+}
+@media (min-width: 1000px) {
+  .single-product .container .price-product .price-discount {
+    font-size: 24px;
+  }
 }
 .single-product .container .options-product {
   display: flex;
@@ -423,6 +500,13 @@ code {
   flex-shrink: 0;
   border: 0px;
   padding: 16px 0px 24px;
+}
+@media (min-width: 1000px) {
+  .single-product .container .options-product {
+    grid-area: options-product;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .single-product .container .options-product .select-single {
   border-radius: 20px;
@@ -445,6 +529,11 @@ code {
   background: rgb(17, 158, 0);
   color: rgb(255, 255, 255);
   cursor: pointer;
+}
+@media (min-width: 1000px) {
+  .single-product .container .options-product .button-product {
+    width: 70%;
+  }
 }
 .single-product .container .options-product .button-product span {
   margin-left: 10px;
@@ -582,7 +671,7 @@ footer .footer-social i {
 .menu-modal .menu-modal-container .menu-modal-bottom .menu-modal-category-single {
   font-size: 16px;
   line-height: 24px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 .menu-modal .menu-modal-container .menu-modal-bottom .menu-modal-category-single i {
   font-size: 16px;

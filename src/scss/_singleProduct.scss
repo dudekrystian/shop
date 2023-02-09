@@ -2,6 +2,10 @@
 
     width: 100%;
     height: 100vh;
+
+    @media (min-width:1000px) {
+        margin: 50px auto;
+    }
     
 
     .container {
@@ -10,10 +14,56 @@
         display: flex;
         flex-direction: column;
 
+        @media (min-width: 1000px) {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product"
+              "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product"
+              "gallery-product gallery-product gallery-product gallery-product details-product details-product details-product"
+              "product-title product-title product-title product-title price-product price-product price-product"
+              "product-title product-title product-title product-title options-product options-product options-product";
+        }
+
+
+        .product-title {
+            @media(min-width: 1000px) {
+                grid-area: product-title;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                flex-shrink: 0;
+                border: 0px;
+                padding: 16px 0px 24px;
+
+                span {
+                    font-size: 24px;
+                    font-weight: bold;
+
+                }
+
+
+            }
+        }
+
         .gallery-product {
             margin: auto;
             width: 233px;
             height: 200px;
+
+            @media (min-width: 1000px) {
+                grid-area: gallery-product;
+
+          
+            }
+
+ 
 
             img {
                 width: 100%;
@@ -28,12 +78,30 @@
             color: grey;
             border: none;
             text-align: start;
+
+            @media (min-width: 1000px) {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                i {
+                    font-size: 16px;
+                }
+            }
+           
         }
 
         .details-product {
             display: flex;
             flex-direction: column;
             margin: 10px auto;
+
+            @media (min-width: 1000px) {
+                grid-area: details-product;
+                justify-content: center;
+            }
+
+            
 
 
             .desc {
@@ -93,12 +161,19 @@
 
 
         .price-product {
+
+
             width: 100%;
-            display: inline-flex;
-            -webkit-box-pack: end;
+            display: flex;
             justify-content: flex-end;
-            -webkit-box-align: baseline;
             align-items: baseline;
+
+            @media (min-width: 1000px) {
+                grid-area: price-product;
+                display: flex;
+                align-items: flex-end;
+                
+            }
 
            .price-old {
             font-size: 13px;
@@ -106,14 +181,28 @@
             color: rgb(148, 148, 148);
             font-weight: normal;
             text-decoration: line-through;
-            margin-right: 8px;           }
+            margin-right: 8px;           
+        
+            @media (min-width: 1000px) {
+                font-size: 18px;
+                
+            }
+                                }
+
+            
 
            .price-discount {
             font-size: 18px;
             line-height: 24px;
             color: rgb(77, 77, 77);
             font-weight: normal;
-            text-decoration: none;           }
+            text-decoration: none;           
+        
+            @media (min-width: 1000px) {
+                font-size: 24px;
+                
+            }
+        }
         }
        
         .options-product {
@@ -125,6 +214,12 @@
             flex-shrink: 0;
             border: 0px;
             padding: 16px 0px 24px;
+
+            @media (min-width: 1000px) {
+                grid-area: options-product;
+                flex-direction: row;
+                justify-content: space-between;
+            }
 
             .select-single {
                 border-radius: 20px;
@@ -148,6 +243,14 @@
                 background: rgb(17, 158, 0);
                 color: rgb(255, 255, 255);
                 cursor: pointer;
+
+                @media (min-width: 1000px) {
+                    width: 70%;
+
+                    
+                }
+
+
 
                 span {
                     margin-left: 10px;

@@ -2,9 +2,10 @@
 
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     .first-item {
-        margin: 1% 1%;
+        margin: 1px auto;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -14,12 +15,18 @@
 
     .logo {
         
-        width: 100%;
+        width: 80%;
         letter-spacing: 1px;
         line-height: 28px;
         height: 28px;
         font-weight: bold;
         text-align: start;
+
+
+
+        
+
+ 
 
         .link {
             text-decoration: none;
@@ -33,21 +40,24 @@
     .user-panel {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+
+        @media (min-width: 1000px) {
+            width: 30%;
+        }
         
         .link {
             text-decoration: none;
             color: black;
         }
 
-        .element {
+        .user-panel-element {
+            flex-basis: 1;
             display: flex;
             flex-direction: column;
-            width: 100%;
             min-width: 64px;
             height: 48px;
             justify-content: center;
-            font-size: 14px;
             cursor: pointer;
             position: relative;
             
@@ -55,7 +65,7 @@
 
             i {
                 text-align: center;
-                font-size: 14px;
+                font-size: 18px;
             }
 
             span {
@@ -106,13 +116,14 @@
 
         :hover {
             color: grey;
+            transition: 0.3s linear;
         }
 
     }
 }
 
     .second-item {
-        margin: 1% 1%;
+        margin: 1px auto;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -122,6 +133,7 @@
             
             display: flex;
             width: 32px;
+            
     
             .element {
                 display: flex;
