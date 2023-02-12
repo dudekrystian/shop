@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   getAllCarts,
   removeFromCart,
@@ -52,7 +53,9 @@ export default function Cart() {
           <span>{currencyFormatter.format(totalAmount)}</span>
         </div>
         <div className="cart-button-pay">
-          <button> Buy</button>
+          <Link to="/order">
+            <button onClick={() => dispatch(clearCart())}> Buy</button>
+          </Link>
         </div>
       </div>
     </div>
