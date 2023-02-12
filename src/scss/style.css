@@ -244,10 +244,10 @@ code {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  color: gray;
 }
 .list-container .link {
   text-decoration: none;
-  color: gray;
 }
 .list-container .name {
   font-size: 24px;
@@ -266,10 +266,18 @@ code {
   height: 46px;
 }
 .list-container .options button {
-  width: 100%;
+  width: 30%;
   background-color: transparent;
   font-size: 14px;
   border: 1px solid rgb(235, 235, 235);
+}
+.list-container .options select {
+  width: 70%;
+  border: 1px solid rgb(235, 235, 235);
+}
+.list-container .options select option {
+  color: gray;
+  text-align: justify;
 }
 .list-container .container-product {
   margin-top: 25px;
@@ -296,6 +304,7 @@ code {
     height: 455px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
   }
 }
 .list-container .container-product .product-container .product-name {
@@ -357,14 +366,29 @@ code {
   display: flex;
   justify-content: flex-end;
 }
+.list-container .container-product .product-container .bottom .options :hover {
+  background-color: rgb(17, 158, 0);
+  color: white;
+  transition: 0.3 ease-in;
+}
 .list-container .container-product .product-container .bottom .options button {
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 24px;
-  color: rgb(77, 77, 77);
+  color: rgb(17, 158, 0);
   font-weight: normal;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  -webkit-box-pack: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 512px;
+  border: 1px solid rgb(17, 158, 0);
+  margin-right: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
   i-color: grey;
 }
 
