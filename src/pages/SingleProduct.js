@@ -112,7 +112,6 @@ export default function SingleProduct() {
             <i class="bi bi-cart-plus"></i>
             <span
               onClick={() => {
-                console.log("ok");
                 handlerAddToCart(product);
               }}
             >

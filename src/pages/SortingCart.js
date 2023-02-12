@@ -1,11 +1,29 @@
-import React, { useState } from "react";
-// import { useEffect } from "react";
+import React from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getSortStatus, setSortOff } from "../store/sortSlice";
 
-export default function SortingCart({ categoryProducts }) {
+export default function SortingCart() {
   const dispatch = useDispatch();
   const isSortOn = useSelector(getSortStatus);
+
+  // const [sorted, setSorted] = useState([...products]);
+
+  // const sortCategoryByRating = () => {
+  //   const sort = [...products].sort((a, b) => b.rating - a.rating);
+  //   setSorted(sort);
+  //   console.log(sorted);
+  //   dispatch(setSortOff(console.log({ sort })));
+  // };
+
+  // const sortCategoryByPriceUp = () => {
+  //   const sort = [...products].sort((a, b) => a.price - b.price);
+  //   setSorted(sort);
+  //   console.log(sorted);
+  //   dispatch(setSortOff());
+  // };
+
+  // console.log(sorted);
 
   const styledNoDisplay = {
     display: "none",

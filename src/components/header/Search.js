@@ -8,6 +8,7 @@ export default function Search() {
     e.preventDefault();
     setSearchTerm(e.target.value);
   };
+
   return (
     <div className="search">
       <Link to={`search/${searchTerm}`}>
