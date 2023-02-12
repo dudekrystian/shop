@@ -18,6 +18,8 @@ import store from "./store/store";
 import { Provider } from "react-redux";
 import Search from "./pages/Search";
 import Cart from "./pages/Cart";
+import SortingCart from "./pages/SortingCart";
+import Order from "./pages/Order";
 
 function App() {
   return (
@@ -33,9 +35,11 @@ function App() {
             <Route path="/category/:category" element={<SingleCategories />} />
             <Route path="/search/:searchTerm" element={<Search />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/order" element={<Order />} />
           </Routes>
           <Footer />
         </BrowserRouter>
+        {/* <SortingCart /> */}
       </Provider>
     </div>
   );
